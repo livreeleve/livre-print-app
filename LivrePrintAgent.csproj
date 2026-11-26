@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>LivrePrintAgent</AssemblyName>
+    <RootNamespace>LivrePrintAgent</RootNamespace>
+    <Version>1.0.0</Version>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <!-- Permite compilar/publicar a partir do Linux ou do Windows. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <DebugType>none</DebugType>
+    <!-- Ícone do arquivo .exe (o mesmo da bandeja, embutido abaixo). -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- A pasta de publicação não faz parte do projeto (senão cada publicação copia a anterior para dentro dela). -->
+    <Compile Remove="publish/**" />
+    <Content Remove="publish/**" />
+    <None Remove="publish/**" />
+    <EmbeddedResource Include="app.ico" LogicalName="app.ico" />
+    <None Update="agent.config.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
