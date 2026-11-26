@@ -64,3 +64,4 @@ dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=
 - O executável não é assinado digitalmente, daí o aviso do SmartScreen. Para evitar o aviso, é preciso um certificado de assinatura de código.
 # livre-print-app
 # livre-print-app
+# livre-print-app
