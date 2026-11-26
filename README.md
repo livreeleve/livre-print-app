@@ -63,3 +63,4 @@ dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=
 - A pasta `livre-print-agent` é temporária: pode ser movida para fora do projeto depois de instalar.
 - O executável não é assinado digitalmente, daí o aviso do SmartScreen. Para evitar o aviso, é preciso um certificado de assinatura de código.
 # livre-print-app
+# livre-print-app
